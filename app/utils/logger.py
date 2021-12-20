@@ -8,6 +8,9 @@ from app.core.config import config
 s = os.sep
 LOG_FILE = f"logs{s}log.log"
 
+if not os.path.isdir("logs"):
+    os.mkdir("logs")
+
 logger.remove(0)  # removes standart handler
 logger.add(
     LOG_FILE,
