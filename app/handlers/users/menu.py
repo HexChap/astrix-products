@@ -31,24 +31,24 @@ async def on_message(msg: types.Message):
 
             # text = (
             #     "**Ваш профиль:**\n"
-            #     f"Имя: **{author.full_name}** ({author.mention})\n"
-            #     f"ID: **{author.id}**"
-            #     f"Статус: **{db_user.status}**"
-            #     f"Баланс: **{db_user.cash}**"
-            #     f"Рейтинг: **{db_user.rating}**"
-            #     f"Кол-во оценок: **{db_user.assessments_count}**"
-            #     f"Действующие подписки: **{db_user.subcsriptions}**"
+            #     f"Имя: `{author.full_name}` ({author.mention})\n"
+            #     f"ID: `{author.id}`"
+            #     f"Статус: `{db_user.status}`"
+            #     f"Баланс: `{db_user.cash}`"
+            #     f"Рейтинг: `{db_user.rating}`"
+            #     f"Кол-во оценок: `{db_user.assessments_count}`"
+            #     f"Действующие подписки: `{db_user.subcsriptions}`"
             # )
 
         else:
             text = (
                 "**Ваш профиль:**\n"
-                f"Имя: **{author.full_name}** ({author.mention})\n"
-                f"ID: **{author.id}**"
-                # f"Статус: **{db_user.status}**"
-                # f"Баланс: **{db_user.cash}**"
-                # f"Рейтинг: **{db_user.rating}**"
-                # f"Кол-во предложений: **{db_user.offers_count}**"
+                f"Имя: `{author.full_name}` ({author.mention})\n"
+                f"ID: `{author.id}`"
+                # f"Статус: `{db_user.status}`"
+                # f"Баланс: `{db_user.cash}`"
+                # f"Рейтинг: `{db_user.rating}`"
+                # f"Кол-во предложений: `{db_user.offers_count}`"
             )
 
         await msg.reply(text, reply_markup=kb)

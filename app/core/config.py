@@ -1,5 +1,7 @@
 from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.files import JSONStorage
+from aiogram.types.message import ParseMode
+
 from app.utils.config_reader import load_config
 
 
@@ -9,6 +11,6 @@ CONFIG_FILE = fr"{DATA_DIR}\config.ini"
 
 config = load_config(CONFIG_FILE)
 
-bot = Bot(token=config.bot.token)
+bot = Bot(token=config.bot.token, parse_mode=ParseMode.MARKDOWN)
 storage = JSONStorage(STATES_FILE)
 dp = Dispatcher(bot, storage=storage)
