@@ -6,7 +6,8 @@ from dataclasses import dataclass
 @dataclass
 class BotConfig:
     token: str
-    bot_id: int
+    username: str
+    id: int
 
 
 @dataclass
@@ -35,7 +36,8 @@ def load_config(path: str) -> Config:
 
     bot_config = BotConfig(
         token=bot_conf["token"],
-        bot_id=bot_conf["bot_id"]
+        username=bot_conf["bot_username"],
+        id=bot_conf["bot_id"]
     )
 
     logging_config = LoggingConfig(

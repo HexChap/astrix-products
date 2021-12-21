@@ -14,7 +14,7 @@ if not os.path.isdir("logs"):
 logger.remove(0)  # removes standart handler
 logger.add(
     LOG_FILE,
-    level=config.logging.level,
+    level="DEBUG",
     rotation=config.logging.rotation,
     compression=config.logging.compression
 )

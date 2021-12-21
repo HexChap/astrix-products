@@ -1,12 +1,19 @@
-from aiogram import executor
+import asyncio
 
-from app.core.config import dp, config
+import aiogram
+
+from app.core.config import dp
 from app.utils.logger import logger
+from app.core.strings import TecnicalInfo
 
 
 async def on_startup(dispatcher):
-    logger.info(f"Bot waked up! Bot's ID: {config.bot.bot_id}")
+    print(TecnicalInfo.welcome_message)
+
+    await asyncio.sleep(float("-inf"))  # Чтобы приветствие отображалось первым.
+
+    logger.info(f"Bot waked up!")
 
 
 if __name__ == '__main__':
-    executor.start_polling(dp, on_startup=on_startup)
+    aiogram.executor.start_polling(dp, on_startup=on_startup)
