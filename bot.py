@@ -2,6 +2,8 @@ import asyncio
 
 import aiogram
 
+import app.handlers
+
 from app.core.config import dp
 from app.utils.logger import logger
 from app.core.strings import TecnicalInfo

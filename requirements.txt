@@ -3,3 +3,5 @@ passlib ~= 1.7.4
 bcrypt ~= 3.2.0
 loguru ~= 0.5.3
 colorama~=0.4.4
+tortoise~=0.1.1
+tortoise[asyncpg]
